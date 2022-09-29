@@ -29,6 +29,9 @@
       "@types/node"
     ]
   },
+  "vueCompilerOptions": {
+    "experimentalDisableTemplateSupport": true
+  },
   "exclude": [
     "node_modules",
     ".nuxt",
