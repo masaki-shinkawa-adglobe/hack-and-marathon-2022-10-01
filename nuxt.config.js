@@ -5,10 +5,6 @@ export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
 
-  router: {
-    base: '/hack-and-marathon-2022-10-01/',
-  },
-
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: 'hack-and-marathon-2022-10-01',
@@ -25,7 +21,7 @@ export default {
       {
         rel: 'icon',
         type: 'image/x-icon',
-        href: '/hack-and-marathon-2022-10-01/favicon.ico',
+        href: 'favicon.ico',
       },
     ],
   },
