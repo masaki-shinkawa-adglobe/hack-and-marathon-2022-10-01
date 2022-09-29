@@ -1,5 +1,7 @@
 <template>
-  <NuxtLogo />
+  <div>
+    <QiitaItems />
+  </div>
 </template>
 
 <script lang="ts">
