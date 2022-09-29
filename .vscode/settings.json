@@ -1,8 +1,14 @@
 {
+  "[ts]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
   "editor.quickSuggestions": {
     "strings": true
   },
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true,
-  },
+    "source.fixAll.eslint": true
+  }
 }
