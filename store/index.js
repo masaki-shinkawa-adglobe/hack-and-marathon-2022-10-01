@@ -51,40 +51,11 @@ export const mutations = {
 }
 
 export const actions = {
-  fetchAnimeList({ commit }) {
-    // const res = await this.$axios.$post(`${baseUrl}/api/rankings`, {
-    //   year: state.year,
-    //   season: state.n,
-    // })
-
-    const res = {
-      anime_list: [
-        {
-          id: 1,
-          rank: 1,
-          title: 'リコリス・リコイル',
-          twitter_account: 'lycoris_recoil',
-          twitter_image: 'https://twitter.com/lycoris_recoil/photo',
-          images: [
-            'https://lycoris-recoil.com/assets/img/top/img_main-02.jpg',
-            'https://animeanime.jp/imgs/zoom/514957.jpg',
-            'https://lycoris-recoil.com/assets/img/top/img_main-02.jpg',
-          ],
-        },
-        {
-          id: 2,
-          rank: 2,
-          title: 'リコリス・リコイル2',
-          twitter_account: 'lycoris_recoil',
-          twitter_image: 'https://twitter.com/lycoris_recoil/photo',
-          images: [
-            'https://lycoris-recoil.com/assets/img/top/img_main-02.jpg',
-            'https://animeanime.jp/imgs/zoom/514957.jpg',
-            'https://lycoris-recoil.com/assets/img/top/img_main-02.jpg',
-          ],
-        },
-      ],
-    }
+  async fetchAnimeList({ commit, state }) {
+    const res = await this.$axios.$post(`${baseUrl}/api/rankings`, {
+      year: state.year,
+      season: state.n,
+    })
 
     commit('setAnimeList', res.anime_list)
   },
@@ -94,37 +65,10 @@ export const actions = {
     commit('setSeasons', res.seasons)
   },
 
-  fetchAnimeDetail({ commit }, animeId) {
-    // const res = await this.$axios.$post(`${baseUrl}/api/rankings`, {
-    //   year: state.year,
-    //   season: state.n,
-    // })
-
-    const res = {
-      id: 1,
-      title: 'リコリス・リコイル',
-      twitter_account: 'lycoris_recoil',
-      twitter_image: 'https://twitter.com/lycoris_recoil/photo',
-      official_url: 'https://lycoris-recoil.com/',
-      location: '静岡県静岡市',
-      images: [
-        'https://lycoris-recoil.com/assets/img/top/img_main-02.jpg',
-        'https://lycoris-recoil.com/assets/img/top/img_main-02.jpg',
-        'https://lycoris-recoil.com/assets/img/top/img_main-02.jpg',
-        'https://animeanime.jp/imgs/zoom/514957.jpg',
-        'https://lycoris-recoil.com/assets/img/top/img_main-02.jpg',
-        'https://lycoris-recoil.com/assets/img/top/img_main-02.jpg',
-        'https://lycoris-recoil.com/assets/img/top/img_main-02.jpg',
-        'https://lycoris-recoil.com/assets/img/top/img_main-02.jpg',
-        'https://lycoris-recoil.com/assets/img/top/img_main-02.jpg',
-        'https://lycoris-recoil.com/assets/img/top/img_main-02.jpg',
-        'https://lycoris-recoil.com/assets/img/top/img_main-02.jpg',
-        'https://lycoris-recoil.com/assets/img/top/img_main-02.jpg',
-        'https://lycoris-recoil.com/assets/img/top/img_main-02.jpg',
-        'https://lycoris-recoil.com/assets/img/top/img_main-02.jpg',
-        'https://lycoris-recoil.com/assets/img/top/img_main-02.jpg',
-      ],
-    }
+  async fetchAnimeDetail({ commit }, animeId) {
+    const res = await this.$axios.$get(
+      `${baseUrl}/api/animes/details/${animeId}`
+    )
 
     commit('setAnime', res)
   },
