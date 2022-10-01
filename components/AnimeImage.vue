@@ -1,6 +1,6 @@
 <template>
   <li>
-    <img :src="image" alt="" />
+    <img :src="image" class="h-full object-cover" />
   </li>
 </template>
 

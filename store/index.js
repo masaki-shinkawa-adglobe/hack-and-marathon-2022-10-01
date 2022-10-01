@@ -50,7 +50,7 @@ export const actions = {
           twitter_image: 'https://twitter.com/lycoris_recoil/photo',
           images: [
             'https://lycoris-recoil.com/assets/img/top/img_main-02.jpg',
-            'https://lycoris-recoil.com/assets/img/top/img_main-02.jpg',
+            'https://animeanime.jp/imgs/zoom/514957.jpg',
             'https://lycoris-recoil.com/assets/img/top/img_main-02.jpg',
           ],
         },
@@ -62,7 +62,7 @@ export const actions = {
           twitter_image: 'https://twitter.com/lycoris_recoil/photo',
           images: [
             'https://lycoris-recoil.com/assets/img/top/img_main-02.jpg',
-            'https://lycoris-recoil.com/assets/img/top/img_main-02.jpg',
+            'https://animeanime.jp/imgs/zoom/514957.jpg',
             'https://lycoris-recoil.com/assets/img/top/img_main-02.jpg',
           ],
         },
