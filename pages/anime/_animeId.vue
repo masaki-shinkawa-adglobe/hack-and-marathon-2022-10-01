@@ -1,5 +1,8 @@
 <template>
-  <div>_animeId.vue</div>
+  <main>
+    <div>_animeId.vue</div>
+    <TitleWithIcon></TitleWithIcon>
+  </main>
 </template>
 
 <script lang="ts">
