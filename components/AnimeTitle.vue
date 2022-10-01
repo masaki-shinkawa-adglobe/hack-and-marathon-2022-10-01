@@ -2,7 +2,7 @@
   <div class="relative flex h-20 w-full items-center">
     <div class="relative flex h-10 w-full items-center bg-pink-primary">
       <span
-        class="absolute top-0 right-0 mr-2 translate-y-[-50%] rounded-xl bg-black/70 px-4 text-white"
+        class="rank absolute top-0 right-0 mr-2 translate-y-[-50%] rounded-2xl bg-black/70 px-4 text-white"
       >
         {{ `No.${anime.rank}` }}
       </span>
@@ -35,3 +35,11 @@ export default class AnimeTitle extends Vue {
   }
 }
 </script>
+
+<style lang="scss">
+@import url('https://fonts.googleapis.com/css2?family=Eczar&display=swap');
+.rank {
+  font-family: 'Eczar';
+  padding-top: 2px
+}
+</style>
