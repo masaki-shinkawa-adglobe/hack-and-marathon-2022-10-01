@@ -4,11 +4,11 @@
       <span
         class="absolute top-0 right-0 mr-2 translate-y-[-50%] rounded-xl bg-black/70 px-4 text-white"
       >
-        No.1
+        {{ `No.${anime.rank}` }}
       </span>
       <span
         class="truncate whitespace-nowrap pl-[calc(80px+0.5rem)] pr-2 text-pink-secondary"
-        >リコリス・リコイルxxxxxxxxxxxxxxxxxxxxxxxx</span
+        >{{ anime.title }}</span
       >
     </div>
     <a :href="twitterUrl" target="_blank" @click="onClickATag">
