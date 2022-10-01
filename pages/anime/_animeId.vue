@@ -1,0 +1,10 @@
+<template>
+  <div>_animeId.vue</div>
+</template>
+
+<script lang="ts">
+import { Component, Vue } from 'nuxt-property-decorator'
+
+@Component
+export default class AnimeId extends Vue {}
+</script>
