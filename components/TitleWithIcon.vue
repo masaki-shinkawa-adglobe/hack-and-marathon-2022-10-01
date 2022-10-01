@@ -2,7 +2,7 @@
   <div class="container">
     <!-- Link Items -->
     <div class="mt-2 px-4">
-      <div class="mx-2 flex">
+      <div v-if="officialUrl" class="mx-2 flex">
         <img class="mx-2 mb-2 w-6" src="~/assets/image/webPage.svg" />
         <a
           :href="officialUrl"
@@ -12,7 +12,7 @@
           >公式HP</a
         >
       </div>
-      <div class="mx-2 mb-2 flex">
+      <div v-if="shop" class="mx-2 mb-2 flex">
         <img class="mx-2 w-6" src="~/assets/image/fashion.svg" />
         <a
           :href="shop"
@@ -22,7 +22,7 @@
           >衣装購入はこちら</a
         >
       </div>
-      <div class="mx-2 mb-2 flex">
+      <div v-if="location" class="mx-2 mb-2 flex">
         <img class="mx-2 w-6" src="~/assets/image/Parthenon.svg" />
         <a
           :href="location"
@@ -45,17 +45,14 @@ export default class TitleWithIcon extends Vue {
   anime!: AnimeDetail
 
   get officialUrl() {
-    // TODO: APIのレスポンスを返す
     return this.anime.official_url
   }
 
   get shop() {
-    // TODO: APIのレスポンスを返す
-    return `https://www.costowns.com/search.html?k=${this.anime.title} コスプレ`
+    return `https://www.costowns.com/search.html?k=${this.anime.title}`
   }
 
   get location() {
-    // TODO: APIのレスポンスを返す
     return `https://www.google.co.jp/maps/place/${this.anime.location}`
   }
 }

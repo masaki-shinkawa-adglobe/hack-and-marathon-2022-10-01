@@ -102,7 +102,6 @@ export const actions = {
 
     const res = {
       id: 1,
-      rank: 1,
       title: 'リコリス・リコイル',
       twitter_account: 'lycoris_recoil',
       twitter_image: 'https://twitter.com/lycoris_recoil/photo',

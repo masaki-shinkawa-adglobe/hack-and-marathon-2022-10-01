@@ -1,17 +1,17 @@
 <template>
   <li>
-    <img :src="image" class="h-full object-cover" v-on:click="toggleModal()" />
+    <img :src="image" class="h-full object-cover" @click="toggleModal()" />
 
     <div
       v-if="showModal"
-      class="outline-none focus:outline-none fixed inset-0 z-50 flex items-center justify-center overflow-y-auto overflow-x-hidden"
+      class="fixed inset-0 z-50 flex items-center justify-center overflow-y-auto overflow-x-hidden outline-none focus:outline-none"
     >
       <div class="relative my-6 mx-auto w-auto max-w-6xl">
         <!--content-->
         <div
-          class="outline-none focus:outline-none relative flex w-full flex-col rounded-lg border-0 bg-white shadow-lg"
+          class="relative flex w-full flex-col rounded-lg border-0 bg-white shadow-lg outline-none focus:outline-none"
         >
-          <img style="width: 100%" :src="image" v-on:click="toggleModal()" />
+          <img style="width: 100%" :src="image" @click="toggleModal()" />
         </div>
       </div>
     </div>
@@ -40,7 +40,9 @@ import 'hooper/dist/hooper.css' // hooperのcssを適用
 export default class AnimeZoomImage extends Vue {
   @Prop({ default: '' })
   image!: string
+  
   showModal = false
+
   toggleModal() {
     this.showModal = !this.showModal
   }
