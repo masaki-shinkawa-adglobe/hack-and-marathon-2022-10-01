@@ -6,11 +6,14 @@ module.exports = {
     './plugins/**/*.{js,ts}',
     './nuxt.config.{js,ts}',
   ],
-  darkMode: false, // or 'media' or 'class'
+  // darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
       rotate: {
         20: '20deg',
+      },
+      backgroundColor: {
+        'pink-primary': '#EF5DA8',
       },
     },
   },

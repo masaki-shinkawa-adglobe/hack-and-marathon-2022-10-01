@@ -1,5 +1,8 @@
 <template>
-  <div>RankingItem</div>
+  <li class="flex flex-col items-start justify-center">
+    <AnimeTitle></AnimeTitle>
+    <AnimeImageList></AnimeImageList>
+  </li>
 </template>
 
 <script lang="ts">

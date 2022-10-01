@@ -1,5 +1,7 @@
 <template>
-  <div>RankingList</div>
+  <ul>
+    <RankingItem></RankingItem>
+  </ul>
 </template>
 
 <script lang="ts">

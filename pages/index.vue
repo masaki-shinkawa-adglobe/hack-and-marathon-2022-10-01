@@ -2,7 +2,7 @@
   <main>
     <NavigationHeader></NavigationHeader>
     <RankingHeader></RankingHeader>
-    <AnimeImageList></AnimeImageList>
+    <RankingList></RankingList>
   </main>
 </template>
 
