@@ -35,10 +35,13 @@ export default class SideMenu extends Vue {
     return this.$store.getters.getSeasons
   }
 
-  setSeason(season: any) {
+  async setSeason(season: any) {
     this.$store.commit('setYear', season.year)
     this.$store.commit('setN', season.n)
-    this.$store.dispatch('fetchAnimeList')
+    await this.$store.dispatch('fetchAnimeList')
+    this.$router.push("/")
+    const dom = document.getElementById('openSidebarMenu')
+    dom?.click()
   }
 }
 </script>
