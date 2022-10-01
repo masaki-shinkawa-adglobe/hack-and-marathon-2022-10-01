@@ -14,10 +14,10 @@
           class="flex justify-between"
           @click="setSeason(season)"
         >
-          <span class="text-pink-primary">
-            {{ season.year }}.{{ season.from }} - {{ season.year }}.{{
-              season.to
-            }}
+          <span class="flex text-pink-primary">
+            <span class="w-20">{{ season.year }}.{{ season.from }}</span>
+            <span class="pr-4">-</span>
+            <span class="w-20">{{ season.year }}.{{ season.to }}</span>
           </span>
           <span class="text-pink-primary">></span>
         </li>
@@ -37,7 +37,7 @@ export default class SideMenu extends Vue {
 
   setSeason(season: any) {
     this.$store.commit('setYear', season.year)
-    this.$store.commit('setN', season.season)
+    this.$store.commit('setN', season.n)
     this.$store.dispatch('fetchAnimeList')
   }
 }
@@ -101,7 +101,7 @@ export default class SideMenu extends Vue {
   cursor: pointer;
 }
 .sidebarMenuInner li span {
-  display: block;
+  display: flex;
   font-size: 18px;
 }
 .sidebarMenuInner li a {

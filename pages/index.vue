@@ -12,9 +12,9 @@ import { Component, Vue } from 'nuxt-property-decorator'
 
 @Component
 export default class Index extends Vue {
-  asyncData({ store }: Context) {
-    store.dispatch('fetchAnimeList')
-    store.dispatch('fetchSeasons')
+  async asyncData({ store }: Context) {
+    await store.dispatch('fetchAnimeList')
+    await store.dispatch('fetchSeasons')
   }
 }
 </script>

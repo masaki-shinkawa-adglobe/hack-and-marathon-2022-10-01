@@ -18,6 +18,7 @@ export const state = () => ({
   n: 4,
   seasons: [],
   animeList: [],
+  anime: null,
 })
 
 export const getters = {
@@ -26,7 +27,7 @@ export const getters = {
   },
   getSeasons(state) {
     return state.seasons.map((season) => {
-      return { ...season, ...convertNtoFromTo(season.season) }
+      return { ...season, ...convertNtoFromTo(season.n) }
     })
   },
 }
@@ -44,11 +45,18 @@ export const mutations = {
   setSeasons(state, seasons) {
     state.seasons = seasons
   },
+  setAnime(state, anime) {
+    state.anime = anime
+  },
 }
 
 export const actions = {
   fetchAnimeList({ commit }) {
-    // const res = await this.$axios.$post(`${baseUrl}/api/rankings`)
+    // const res = await this.$axios.$post(`${baseUrl}/api/rankings`, {
+    //   year: state.year,
+    //   season: state.n,
+    // })
+
     const res = {
       anime_list: [
         {
@@ -81,25 +89,44 @@ export const actions = {
     commit('setAnimeList', res.anime_list)
   },
 
-  fetchSeasons({ commit }) {
-    // const res = await this.$axios.$post(`${baseUrl}/api/rankings`)
+  async fetchSeasons({ commit }) {
+    const res = await this.$axios.$post(`${baseUrl}/api/seasons`)
+    commit('setSeasons', res.seasons)
+  },
+
+  fetchAnimeDetail({ commit }, animeId) {
+    // const res = await this.$axios.$post(`${baseUrl}/api/rankings`, {
+    //   year: state.year,
+    //   season: state.n,
+    // })
+
     const res = {
-      seasons: [
-        {
-          year: 2022,
-          season: 1,
-        },
-        {
-          year: 2022,
-          season: 2,
-        },
-        {
-          year: 2022,
-          season: 3,
-        },
+      id: 1,
+      rank: 1,
+      title: 'リコリス・リコイル',
+      twitter_account: 'lycoris_recoil',
+      twitter_image: 'https://twitter.com/lycoris_recoil/photo',
+      official_url: 'https://lycoris-recoil.com/',
+      location: '静岡県静岡市',
+      images: [
+        'https://lycoris-recoil.com/assets/img/top/img_main-02.jpg',
+        'https://lycoris-recoil.com/assets/img/top/img_main-02.jpg',
+        'https://lycoris-recoil.com/assets/img/top/img_main-02.jpg',
+        'https://animeanime.jp/imgs/zoom/514957.jpg',
+        'https://lycoris-recoil.com/assets/img/top/img_main-02.jpg',
+        'https://lycoris-recoil.com/assets/img/top/img_main-02.jpg',
+        'https://lycoris-recoil.com/assets/img/top/img_main-02.jpg',
+        'https://lycoris-recoil.com/assets/img/top/img_main-02.jpg',
+        'https://lycoris-recoil.com/assets/img/top/img_main-02.jpg',
+        'https://lycoris-recoil.com/assets/img/top/img_main-02.jpg',
+        'https://lycoris-recoil.com/assets/img/top/img_main-02.jpg',
+        'https://lycoris-recoil.com/assets/img/top/img_main-02.jpg',
+        'https://lycoris-recoil.com/assets/img/top/img_main-02.jpg',
+        'https://lycoris-recoil.com/assets/img/top/img_main-02.jpg',
+        'https://lycoris-recoil.com/assets/img/top/img_main-02.jpg',
       ],
     }
 
-    commit('setSeasons', res.seasons)
+    commit('setAnime', res)
   },
 }
