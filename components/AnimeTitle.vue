@@ -8,8 +8,9 @@
       </span>
       <span
         class="truncate whitespace-nowrap pl-[calc(80px+0.5rem)] pr-2 text-pink-secondary"
-        >{{ anime.title }}</span
       >
+        {{ anime.title }}
+      </span>
     </div>
     <a :href="twitterUrl" target="_blank" @click="onClickATag">
       <img src="~/assets/image/twitterIcon.png" class="absolute top-0 left-1" />

@@ -1,10 +1,15 @@
 <template>
-  <div>AnimeImage</div>
+  <li>
+    <img :src="image" alt="" />
+  </li>
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'nuxt-property-decorator'
+import { Component, Prop, Vue } from 'nuxt-property-decorator'
 
 @Component
-export default class AnimeImage extends Vue {}
+export default class AnimeImage extends Vue {
+  @Prop({ default: '' })
+  image!: string
+}
 </script>

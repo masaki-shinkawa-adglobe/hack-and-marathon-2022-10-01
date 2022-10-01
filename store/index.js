@@ -49,9 +49,9 @@ export const actions = {
           twitter_account: 'lycoris_recoil',
           twitter_image: 'https://twitter.com/lycoris_recoil/photo',
           images: [
-            'https://www.google.com/url?sa=i&url=https%3A%2F%2Fanimeanime.jp%2Farticle%2F2022%2F08%2F27%2F71701.html&psig=AOvVaw020yZ9QbCuA1gfxB_dNGUE&ust=1664597436923000&source=images&cd=vfe&ved=0CAwQjRxqFwoTCJDSxOnSu_oCFQAAAAAdAAAAABAD',
-            'https://www.google.com/url?sa=i&url=https%3A%2F%2Fanimeanime.jp%2Farticle%2F2022%2F08%2F27%2F71701.html&psig=AOvVaw020yZ9QbCuA1gfxB_dNGUE&ust=1664597436923000&source=images&cd=vfe&ved=0CAwQjRxqFwoTCJDSxOnSu_oCFQAAAAAdAAAAABAD',
-            'https://www.google.com/url?sa=i&url=https%3A%2F%2Fanimeanime.jp%2Farticle%2F2022%2F08%2F27%2F71701.html&psig=AOvVaw020yZ9QbCuA1gfxB_dNGUE&ust=1664597436923000&source=images&cd=vfe&ved=0CAwQjRxqFwoTCJDSxOnSu_oCFQAAAAAdAAAAABAD',
+            'https://lycoris-recoil.com/assets/img/top/img_main-02.jpg',
+            'https://lycoris-recoil.com/assets/img/top/img_main-02.jpg',
+            'https://lycoris-recoil.com/assets/img/top/img_main-02.jpg',
           ],
         },
         {
@@ -61,9 +61,9 @@ export const actions = {
           twitter_account: 'lycoris_recoil',
           twitter_image: 'https://twitter.com/lycoris_recoil/photo',
           images: [
-            'https://www.google.com/url?sa=i&url=https%3A%2F%2Fanimeanime.jp%2Farticle%2F2022%2F08%2F27%2F71701.html&psig=AOvVaw020yZ9QbCuA1gfxB_dNGUE&ust=1664597436923000&source=images&cd=vfe&ved=0CAwQjRxqFwoTCJDSxOnSu_oCFQAAAAAdAAAAABAD',
-            'https://www.google.com/url?sa=i&url=https%3A%2F%2Fanimeanime.jp%2Farticle%2F2022%2F08%2F27%2F71701.html&psig=AOvVaw020yZ9QbCuA1gfxB_dNGUE&ust=1664597436923000&source=images&cd=vfe&ved=0CAwQjRxqFwoTCJDSxOnSu_oCFQAAAAAdAAAAABAD',
-            'https://www.google.com/url?sa=i&url=https%3A%2F%2Fanimeanime.jp%2Farticle%2F2022%2F08%2F27%2F71701.html&psig=AOvVaw020yZ9QbCuA1gfxB_dNGUE&ust=1664597436923000&source=images&cd=vfe&ved=0CAwQjRxqFwoTCJDSxOnSu_oCFQAAAAAdAAAAABAD',
+            'https://lycoris-recoil.com/assets/img/top/img_main-02.jpg',
+            'https://lycoris-recoil.com/assets/img/top/img_main-02.jpg',
+            'https://lycoris-recoil.com/assets/img/top/img_main-02.jpg',
           ],
         },
       ],

@@ -1,5 +1,5 @@
 <template>
-  <ul>
+  <ul class="mt-2">
     <RankingItem
       v-for="anime in animeList"
       :key="anime.id"
