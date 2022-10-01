@@ -1,6 +1,6 @@
 <template>
   <main>
-    <div>_animeId.vue</div>
+    <NavigationHeader></NavigationHeader>
     <TitleWithIcon></TitleWithIcon>
   </main>
 </template>

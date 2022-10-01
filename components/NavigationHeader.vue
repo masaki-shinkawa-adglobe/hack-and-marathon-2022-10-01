@@ -1,5 +1,8 @@
 <template>
-  <div>NavigationHeader</div>
+  <header class="flex items-center justify-center">
+    <SideMenu></SideMenu>
+    <Logo></Logo>
+  </header>
 </template>
 
 <script lang="ts">

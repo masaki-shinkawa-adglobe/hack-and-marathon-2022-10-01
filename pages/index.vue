@@ -14,6 +14,7 @@ import { Component, Vue } from 'nuxt-property-decorator'
 export default class Index extends Vue {
   asyncData({ store }: Context) {
     store.dispatch('fetchAnimeList')
+    store.dispatch('fetchSeasons')
   }
 }
 </script>

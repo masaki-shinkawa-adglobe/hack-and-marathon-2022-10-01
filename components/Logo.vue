@@ -1,5 +1,5 @@
 <template>
-  <div>Logo</div>
+  <img src="~/assets/image/logo.svg" alt="">
 </template>
 
 <script lang="ts">
